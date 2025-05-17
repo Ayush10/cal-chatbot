@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal.com Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Cal.com Chatbot</h1>
+        </div>
+        <div class="chat-sidebar" id="chat-sidebar" style="display:none;">
+            <div class="sidebar-header">
+                <input type="text" id="history-search-input" placeholder="Search history...">
+                <button id="history-search-button">Search</button>
+                <button id="sidebar-close">Close</button>
+            </div>
+            <ul id="history-list"></ul>
+        </div>
+        <button id="sidebar-toggle" style="position:absolute;left:10px;top:10px;z-index:10;">History</button>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">
+                <div class="message-content">
+                    Hello! I can help you manage your Cal.com calendar. Here are some things you can say:
+                    <ul>
+                        <li>"Help me book a meeting"</li>
+                        <li>"Show me my scheduled events"</li>
+                        <li>"Cancel my event at 3pm today"</li>
+                        <li>"Reschedule my 2pm meeting to tomorrow at 4pm"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message here...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
