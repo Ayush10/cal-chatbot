@@ -1,0 +1,6 @@
+[2025-05-18T19:01:50-07:00] [user]: Hello
+[2025-05-18T19:01:50-07:00] [user]: What can you do?
+[2025-05-18T19:01:50-07:00] [user]: help me to book a meeting
+[2025-05-18T19:01:50-07:00] [user]: Strategy Session
+[2025-05-18T19:01:50-07:00] [user]: Strategy Session about the startup, date is tomorrow time is from 5-6pm duration is 1 hour or 60 minutes and attendee's email address is random, attendees name is Ayush Ojha and random
+[2025-05-18T19:01:50-07:00] [user]: Timezone is PST, belevih4634@inkight.com

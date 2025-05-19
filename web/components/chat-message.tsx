@@ -66,6 +66,10 @@ export function ChatMessage({ message }: ChatMessageProps) {
             <span>{format(parseISO(message.scheduledDate), "PPP 'at' p")}</span>
           </div>
         )}
+
+        {message.role === "assistant" && message.read && (
+          <span className="ml-2 text-xs text-green-500 align-bottom" title="Read">✔</span>
+        )}
       </div>
     </div>
   )

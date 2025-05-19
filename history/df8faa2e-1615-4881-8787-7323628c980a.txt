@@ -1,0 +1,13 @@
+[2025-05-18T19:00:26-07:00] [user]: Hello
+[2025-05-18T19:00:26-07:00] [user]: What can you do?
+[2025-05-18T19:00:26-07:00] [user]: help me to book a meeting
+[2025-05-18T19:00:30-07:00] [assistant]: I can definitely help with that. Please provide the following details for the meeting:
+
+1. **Purpose or Title of the Meeting**
+2. **Description of the Meeting** (if you want to include one)
+3. **Date and Time** for the start and end of the meeting
+4. **Duration** of the meeting
+5. **Attendee's Email Address**
+6. **Attendee's Name**
+
+With these details, I can proceed to book the meeting for you.

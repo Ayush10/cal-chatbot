@@ -1,0 +1,6 @@
+[2025-05-18T19:13:12-07:00] [user]: Hi
+[2025-05-18T19:13:12-07:00] [user]: What can you do?
+[2025-05-18T19:13:12-07:00] [user]: Create a booking for tomorrow and fill it with random details
+[2025-05-18T19:13:12-07:00] [user]: create a booking
+[2025-05-18T19:13:12-07:00] [user]: fill it up with random details
+[2025-05-18T19:13:12-07:00] [user]: Ayush Ojha, ayushojha@email.com

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { formatDistanceToNow } from "date-fns"
 
 export function ChatHistory() {
-  const { conversations, currentConversationId, startNewConversation, loadConversation, deleteConversation } = useChat()
+  const { conversations, currentConversationId, startNewConversation, loadConversation, deleteConversation, getUnreadCount } = useChat()
 
   return (
     <Card className="h-full">
@@ -31,35 +31,45 @@ export function ChatHistory() {
             {conversations.length === 0 ? (
               <p className="text-sm text-muted-foreground text-center py-4">No conversation history</p>
             ) : (
-              conversations.map((conversation) => (
-                <div
-                  key={conversation.id}
-                  className={cn(
-                    "flex items-center justify-between group rounded-md px-3 py-2 text-sm hover:bg-accent cursor-pointer",
-                    conversation.id === currentConversationId && "bg-accent",
-                  )}
-                  onClick={() => loadConversation(conversation.id)}
-                >
-                  <div className="truncate">
-                    <div className="font-medium truncate">{conversation.title || "New Conversation"}</div>
-                    <div className="text-xs text-muted-foreground">
-                      {formatDistanceToNow(new Date(conversation.timestamp), { addSuffix: true })}
-                    </div>
-                  </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="h-6 w-6 opacity-0 group-hover:opacity-100"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      deleteConversation(conversation.id)
-                    }}
+              conversations.map((conversation) => {
+                const unread = getUnreadCount(conversation)
+                return (
+                  <div
+                    key={conversation.id}
+                    className={cn(
+                      "flex items-center justify-between group rounded-md px-3 py-2 text-sm hover:bg-accent cursor-pointer",
+                      conversation.id === currentConversationId && "bg-accent",
+                    )}
+                    onClick={() => loadConversation(conversation.id)}
                   >
-                    <Trash2 className="h-3 w-3" />
-                    <span className="sr-only">Delete</span>
-                  </Button>
-                </div>
-              ))
+                    <div className="truncate">
+                      <div className="font-medium truncate flex items-center gap-2">
+                        {conversation.title || "New Conversation"}
+                        {unread > 0 && (
+                          <span className="ml-2 inline-block min-w-[18px] px-1 py-0.5 rounded-full bg-green-500 text-white text-xs text-center">
+                            {unread}
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {formatDistanceToNow(new Date(conversation.timestamp), { addSuffix: true })}
+                      </div>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-6 w-6 opacity-0 group-hover:opacity-100"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        deleteConversation(conversation.id)
+                      }}
+                    >
+                      <Trash2 className="h-3 w-3" />
+                      <span className="sr-only">Delete</span>
+                    </Button>
+                  </div>
+                )
+              })
             )}
           </div>
         </ScrollArea>

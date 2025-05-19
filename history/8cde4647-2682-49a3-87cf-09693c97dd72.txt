@@ -1,0 +1,10 @@
+[2025-05-18T19:04:41-07:00] [user]: Hi
+[2025-05-18T19:04:41-07:00] [user]: What can you do?
+[2025-05-18T19:04:45-07:00] [assistant]: I can assist you with a variety of tasks, including:
+
+1. **Booking Meetings**: I can help you book meetings or events on your calendar.
+2. **Managing Calendar Events**: I can list, cancel, and reschedule your calendar events.
+3. **Checking Availability**: I can check available time slots for a specific event type in your calendar.
+4. **Creating Custom Event Types**: I can create custom event types for different meeting or event needs.
+
+If you have any specific tasks or questions, feel free to let me know, and I’ll be glad to assist you!

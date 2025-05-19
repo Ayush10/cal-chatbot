@@ -198,3 +198,21 @@ func (c *Client) createEventType(args string) (interface{}, error) {
 func containsIgnoreCase(s, substr string) bool {
 	return strings.Contains(strings.ToLower(s), strings.ToLower(substr))
 }
+
+// listEventTypes handles the listEventTypes function call
+func (c *Client) listEventTypes(args string) (interface{}, error) {
+	log.Printf("[INFO] listEventTypes called")
+	eventTypes, err := c.calcomClient.GetEventTypes()
+	if err != nil {
+		log.Printf("[ERROR] listEventTypes: failed to fetch event types: %v", err)
+		return nil, fmt.Errorf("failed to fetch event types: %v", err)
+	}
+	if len(eventTypes) == 0 {
+		return "You have no event types set up.", nil
+	}
+	result := "Here are your available event types:\n"
+	for _, et := range eventTypes {
+		result += fmt.Sprintf("- %s (%s): %s [%d %s]\n", et.Title, et.Slug, et.Description, et.Length, et.LengthUnit)
+	}
+	return result, nil
+}

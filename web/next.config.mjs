@@ -9,6 +9,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/cal/:path*',
+        destination: 'http://localhost:8080/api/cal/:path*',
+      },
+    ]
+  },
 }
 
 export default nextConfig

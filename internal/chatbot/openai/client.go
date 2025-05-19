@@ -2,6 +2,7 @@ package openai
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 
@@ -22,6 +23,25 @@ type Client struct {
 // ProcessMessage handles a user message and returns a response
 func (c *Client) ProcessMessage(ctx context.Context, messages []models.ChatMessage) (string, error) {
 	log.Printf("[INFO] ProcessMessage called with %d messages", len(messages))
+
+	// Check for direct booking intent in the last user message
+	if len(messages) > 0 {
+		lastMsg := messages[len(messages)-1]
+		if lastMsg.Role == "user" && lastMsg.Booking != nil {
+			log.Printf("[INFO] Direct booking detected in user message, bypassing LLM.")
+			bookingBytes, err := json.Marshal(lastMsg.Booking)
+			if err != nil {
+				return "Sorry, I couldn't process your booking details.", err
+			}
+			result, err := c.bookMeeting(string(bookingBytes))
+			if err != nil {
+				return "Sorry, I couldn't book your meeting: " + err.Error(), err
+			}
+			resultJSON, _ := json.Marshal(result)
+			return string(resultJSON), nil
+		}
+	}
+
 	openaiMessages := ConvertToOpenAIMessages(messages)
 	functionDefinitions := getFunctionDefinitions()
 
@@ -185,6 +205,14 @@ func getFunctionDefinitions() []goopenai.FunctionDefinition {
 					},
 				},
 				"required": []string{"title", "slug", "length", "lengthUnit"},
+			},
+		},
+		{
+			Name:        "listEventTypes",
+			Description: "List all event types available for booking.",
+			Parameters: map[string]interface{}{
+				"type":       "object",
+				"properties": map[string]interface{}{},
 			},
 		},
 	}

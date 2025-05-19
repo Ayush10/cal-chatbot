@@ -1,0 +1,2 @@
+[2025-05-18T19:27:27-07:00] [user]: show me scheduled events for dowis62636@daupload.com
+[2025-05-18T19:27:30-07:00] [assistant]: I'm unable to show specific scheduled events for an email address. You might want to check directly in your email or calendar application for any scheduled events. Let me know if there's anything else I can assist you with!

@@ -1,0 +1,2 @@
+[2025-05-18T19:12:20-07:00] [user]: Hi
+[2025-05-18T19:12:20-07:00] [assistant]: Hello! How can I assist you today?

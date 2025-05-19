@@ -1,0 +1,2 @@
+[2025-05-18T19:23:22-07:00] [user]: show me scheduled events
+[2025-05-18T19:23:24-07:00] [assistant]: It looks like you have no scheduled events. If there's anything specific you need to plan or add to your schedule, let me know, and I can assist you further!

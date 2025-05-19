@@ -1,0 +1,7 @@
+[2025-05-18T19:17:48-07:00] [user]: Hi
+[2025-05-18T19:17:48-07:00] [user]: What can you do?
+[2025-05-18T19:17:48-07:00] [user]: Create a booling
+[2025-05-18T19:17:48-07:00] [user]: Fill it with random details
+[2025-05-18T19:17:48-07:00] [user]: Tomorrow at 5-6 pm
+[2025-05-18T19:17:48-07:00] [user]: show me the scheduled events
+[2025-05-18T19:17:51-07:00] [assistant]: It looks like there are no scheduled events currently. If you want to schedule a new event or need assistance with anything else, just let me know!

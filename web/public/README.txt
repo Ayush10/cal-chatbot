@@ -1,0 +1,1 @@
+Please add bot-avatar.png and user-avatar.png to this directory for chat avatars to work. 

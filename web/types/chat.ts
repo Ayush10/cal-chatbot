@@ -8,6 +8,9 @@ export interface Message {
     url: string
   } | null
   scheduledDate?: string | null
+  read?: boolean
+  booking?: Record<string, any>
+  listEvents?: Record<string, any>
 }
 
 export interface Conversation {
@@ -15,4 +18,5 @@ export interface Conversation {
   title: string
   messages: Message[]
   timestamp: number
+  lastReadTimestamp?: number
 }

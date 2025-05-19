@@ -1,0 +1,13 @@
+[2025-05-18T19:16:54-07:00] [user]: Hi
+[2025-05-18T19:16:54-07:00] [user]: What can you do?
+[2025-05-18T19:16:54-07:00] [user]: Create a booling
+[2025-05-18T19:16:54-07:00] [user]: Fill it with random details
+[2025-05-18T19:16:58-07:00] [assistant]: The event type "General Discussion" has been successfully created. Here are the details:
+
+- **Title**: General Discussion
+- **Description**: A casual meeting to discuss various topics.
+- **Duration**: 30 minutes
+- **Slug**: general-discussion
+
+Now, if you want to schedule an event of this type, please provide the date and time along with any other specific requirements you might have, such as attendees.
+

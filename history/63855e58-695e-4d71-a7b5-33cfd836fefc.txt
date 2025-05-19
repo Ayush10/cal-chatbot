@@ -1,0 +1,15 @@
+[2025-05-18T19:01:24-07:00] [user]: Hello
+[2025-05-18T19:01:24-07:00] [user]: What can you do?
+[2025-05-18T19:01:24-07:00] [user]: help me to book a meeting
+[2025-05-18T19:01:24-07:00] [user]: Strategy Session
+[2025-05-18T19:01:24-07:00] [user]: Strategy Session about the startup, date is tomorrow time is from 5-6pm duration is 1 hour or 60 minutes and attendee's email address is random, attendees name is Ayush Ojha and random
+[2025-05-18T19:01:28-07:00] [assistant]: To clarify, it sounds like you provided some incomplete information. I need the proper email address for the attendee.
+
+Here’s what I gathered:
+- **Meeting Title**: Strategy Session
+- **Description**: Strategy Session about the startup
+- **Date and Time Start**: Tomorrow at 5:00 PM
+- **Duration**: 1 hour (5:00 PM to 6:00 PM)
+- **Attendee’s Name**: Ayush Ojha
+
+Could you please confirm the attendee’s email address and the timezone you're referring to so I can finalize the booking?

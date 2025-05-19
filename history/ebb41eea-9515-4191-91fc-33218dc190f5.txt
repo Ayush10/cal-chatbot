@@ -1,0 +1,13 @@
+[2025-05-18T19:00:36-07:00] [user]: Hello
+[2025-05-18T19:00:36-07:00] [user]: What can you do?
+[2025-05-18T19:00:36-07:00] [user]: help me to book a meeting
+[2025-05-18T19:00:36-07:00] [user]: Strategy Session
+[2025-05-18T19:00:40-07:00] [assistant]: Great! We're setting up a "Strategy Session" meeting. Could you provide the following details to complete the booking?
+
+1. **Description of the Meeting** (if applicable)
+2. **Date and Time** for the start and end of the meeting
+3. **Duration** of the meeting (if the exact end time is not known)
+4. **Attendee's Email Address**
+5. **Attendee's Name**
+
+Please provide these specifics so I can proceed with scheduling the meeting.

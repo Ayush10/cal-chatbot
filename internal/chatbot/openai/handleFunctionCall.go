@@ -27,6 +27,8 @@ func HandleFunctionCall(c *Client, ctx context.Context, functionCall *openai.Fun
 		result, err = c.rescheduleEvent(functionCall.Arguments)
 	case "createEventType":
 		result, err = c.createEventType(functionCall.Arguments)
+	case "listEventTypes":
+		result, err = c.listEventTypes(functionCall.Arguments)
 	default:
 		log.Printf("[ERROR] HandleFunctionCall: unknown function: %s", functionCall.Name)
 		return "", fmt.Errorf("unknown function: %s", functionCall.Name)

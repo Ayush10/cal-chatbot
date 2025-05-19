@@ -100,6 +100,9 @@ func (c *Client) GetEvents(email string) ([]models.Event, error) {
 		return nil, err
 	}
 
+	// Debug: log the raw API response
+	fmt.Printf("[DEBUG] Cal.com GetEvents raw response for email '%s': %s\n", email, string(respBody))
+
 	var response struct {
 		Bookings []models.Event `json:"bookings"`
 	}

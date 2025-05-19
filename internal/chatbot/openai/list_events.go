@@ -27,7 +27,10 @@ func (c *Client) listEvents(args string) (interface{}, error) {
 
 	log.Printf("[INFO] listEvents: events fetched successfully for %s", params.Email)
 	if len(events) == 0 {
-		return "You have no scheduled events.", nil
+		return map[string]interface{}{
+			"events":  []interface{}{},
+			"message": fmt.Sprintf("You have no scheduled events for %s.", params.Email),
+		}, nil
 	}
 
 	// Format the events for user-friendly display
@@ -35,5 +38,8 @@ func (c *Client) listEvents(args string) (interface{}, error) {
 	for _, event := range events {
 		result += fmt.Sprintf("- %s: %s to %s\n  %s\n", event.Title, event.StartTime.Format("2006-01-02 15:04"), event.EndTime.Format("15:04"), event.Description)
 	}
-	return result, nil
+	return map[string]interface{}{
+		"events":  events,
+		"message": result,
+	}, nil
 }

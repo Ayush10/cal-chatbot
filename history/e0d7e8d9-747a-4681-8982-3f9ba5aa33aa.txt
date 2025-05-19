@@ -1,0 +1,12 @@
+[2025-05-18T19:16:32-07:00] [user]: Hi
+[2025-05-18T19:16:32-07:00] [user]: What can you do?
+[2025-05-18T19:16:36-07:00] [assistant]: I can help with a variety of tasks involving managing and scheduling events or meetings. Here’s a list of some specific things I can assist with:
+
+1. **Scheduling Meetings**: I can book meetings or events based on available time slots.
+2. **Listing Events**: I can list all your scheduled events or filter them by specific criteria.
+3. **Canceling Events**: If you need to cancel a scheduled event, I can handle that.
+4. **Rescheduling Events**: I can help you change the timing of an existing event.
+5. **Checking Availability**: I can check available time slots for a specific event type, making it easier for you to plan.
+6. **Managing Event Types**: I can create new types of events with specific time lengths and descriptions for quicker scheduling in the future.
+
+If you need help with any of the above tasks or anything similar related to event management, feel free to ask!

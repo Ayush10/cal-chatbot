@@ -1,0 +1,2 @@
+[2025-05-18T19:39:19-07:00] [user]: show me the scheduled events for dowis62636@daupload.com
+[2025-05-18T19:39:22-07:00] [assistant]: I don't have access to private calendars or the capability to fetch specific information like scheduled events for an email account. If you need help with your calendar, try checking the calendar service associated with your email account, such as Google Calendar, Outlook, or another service you might be using.

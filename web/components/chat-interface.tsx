@@ -15,7 +15,7 @@ import { SimpleDatePicker } from "@/components/simple-date-picker"
 import { format } from "date-fns"
 
 export function ChatInterface() {
-  const { currentMessages, isLoading, sendMessage, currentConversationId } = useChat()
+  const { currentMessages, isLoading, sendMessage, currentConversationId, markAllAsRead } = useChat()
   const [input, setInput] = useState("")
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
@@ -23,6 +23,12 @@ export function ChatInterface() {
 
   useEffect(() => {
     scrollToBottom()
+    if (
+      document.visibilityState === "visible" &&
+      currentMessages.some((msg) => msg.role === "assistant" && !msg.read)
+    ) {
+      markAllAsRead()
+    }
   }, [currentMessages])
 
   const scrollToBottom = () => {
